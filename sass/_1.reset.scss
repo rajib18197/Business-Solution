@@ -1,0 +1,42 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Inter", sans-serif;
+  color: #444;
+  line-height: 1.9;
+}
+::selection {
+  background-color: #730039;
+  color: greenyellow;
+}
+.container {
+  display: grid;
+  grid-template-rows: max-content 85vh repeat(8, min-content);
+  grid-template-columns:
+    [full-start] 1fr [center-start] repeat(
+      8,
+      [col-start] minmax(min-content, 14rem) [col-end]
+    )
+    [center-end]
+    1fr [full-end];
+}
+
+.questions {
+  background-color: darkorange;
+  grid-column: center-start / center-end;
+  height: 400px;
+}
+.footer {
+  background-color: darkslategray;
+  grid-column: full-start / full-end;
+  height: 400px;
+}

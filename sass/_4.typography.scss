@@ -1,0 +1,125 @@
+.heading-primary {
+  font-size: 5rem;
+  line-height: 1.25;
+  margin-bottom: 3rem;
+}
+.heading-secondary {
+  font-size: 4rem;
+  line-height: 1.3;
+  font-weight: 500;
+}
+.text-m {
+  position: relative;
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: greenyellow;
+    background-image: linear-gradient(to top left, #39b385, #9be15d);
+    background-image: linear-gradient(to top left, #8da4ec, #4464e4);
+    opacity: 0.7;
+    z-index: -1;
+    transform: scale(1.07, 1.05) skewX(-15deg);
+  }
+}
+.paragraph {
+  font-size: 1.7rem;
+  line-height: 1.7;
+}
+.btn {
+  display: block;
+  font-size: 2rem;
+  font-weight: 400;
+  border: none;
+  padding-bottom: 3px;
+  color: #730099;
+  background-color: #f3f3f3;
+  font-family: inherit;
+  border-bottom: 2px solid #730099;
+  cursor: pointer;
+}
+.slide-box {
+  display: inline-block;
+  background-color: #101d26;
+  padding: 2rem 4rem;
+  border: none;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  &--1,
+  &--2 {
+    border: none;
+    font-size: 2rem;
+    background-color: #101d26;
+    color: #fff;
+    cursor: pointer;
+  }
+  &--1 {
+    transform: translateX(-100%);
+  }
+  &--2 {
+    transform: translateX(100%);
+  }
+}
+
+.section-title {
+  max-width: 110rem;
+  padding: 0 12rem;
+  margin: 0 auto 6rem auto;
+}
+.sub-heading {
+  display: block;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #cf711f;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  line-height: 1.1;
+}
+//
+.btn-tertiary {
+  &:link,
+  &:visited {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 1.4rem;
+    letter-spacing: 0.1rem;
+    padding: 1.5rem 4rem;
+    border: none;
+    border-radius: 10rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    position: relative;
+    transition: all 0.6s;
+  }
+  &:hover {
+    background-color: #1e303f;
+  }
+
+  &:active {
+    transform: translateY(-1px);
+  }
+
+  &::after {
+    content: "";
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    padding: 1.5rem 4rem;
+    border-radius: 10rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 0.6s;
+  }
+
+  &--white {
+    background-color: #101d26;
+    color: #fff;
+  }
+}
