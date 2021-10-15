@@ -10,7 +10,7 @@ html {
   box-sizing: border-box;
 }
 body {
-  font-family: "Inter", sans-serif;
+  font-family: 'Inter', sans-serif;
   color: #444;
   line-height: 1.9;
 }
@@ -30,11 +30,6 @@ body {
     1fr [full-end];
 }
 
-.questions {
-  background-color: darkorange;
-  grid-column: center-start / center-end;
-  height: 400px;
-}
 .footer {
   background-color: darkslategray;
   grid-column: full-start / full-end;
