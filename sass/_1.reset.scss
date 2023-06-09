@@ -10,12 +10,14 @@ html {
   box-sizing: border-box;
 }
 body {
-  font-family: 'Inter', sans-serif;
-  color: #444;
+  // font-family: 'Open Sans', sans-serif;
+  font-family: 'Raleway', sans-serif;
+  // font-family: 'Josefin Sans', sans-serif;
   line-height: 1.9;
-  // background: #120b1c;
-  // background: #11111d;
-  // background: #191933;
+  background-color: #f8fafc;
+  // background-color: #111827;
+  color: #444;
+  // color: white;
 }
 ::selection {
   background-color: #730039;
@@ -23,7 +25,7 @@ body {
 }
 .container {
   display: grid;
-  grid-template-rows: max-content 85vh repeat(8, min-content);
+  grid-template-rows: max-content 86vh repeat(8, min-content);
   grid-template-columns:
     [full-start] 1fr [center-start] repeat(
       8,

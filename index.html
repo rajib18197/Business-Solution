@@ -8,16 +8,26 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Mono&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Arvo:wght@400;700&family=Space+Mono&display=swap"
       rel="stylesheet"
     />
+
     <!-- title -->
     <title>Business Solution-Creative Agency</title>
     <!-- link to css -->
     <link rel="stylesheet" href="css/style.css" />
     <!-- favicon -->
     <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
-    <script defer src="./script.js"></script>
+    <!-- <script defer src="./script.js"></script> -->
+    <script defer src="./js/script.js"></script>
+    <style>
+      .sticky {
+        position: fixed;
+        width: 100%;
+        background-color: orange;
+        z-index: 100;
+      }
+    </style>
   </head>
   <body class="container">
     <header class="header">
@@ -34,7 +44,7 @@
             <a href="#section--3" class="header__link">Testimonials</a>
           </li>
           <li class="header__list">
-            <a href="#" class="header__link text-color btn--show-modal"
+            <a href="#modal" class="header__link text-color btn--show-modal"
               >Open account</a
             >
           </li>
@@ -50,7 +60,7 @@
               <div class="showcase__photo">
                 <img src="img/bg1.jpg" alt="" />
               </div>
-              <div class="showcase__intro">
+              <!-- <div class="showcase__intro">
                 <h1 class="heading-primary">
                   When <span class="text-m">Creativity</span> meets
                   <span class="text-m">minimalist</span>
@@ -59,17 +69,16 @@
                   A Simpler Creative agency experience for a simpler life.
                 </h4>
                 <button class="btn btn--scroll-to">Learn More &rarr;</button>
-                <!-- slider -->
-                <!-- <div class="slide-box">
-                <button class="slide-box--1">&larr;</button>
-                <button class="slide-box--2">&rarr;</button>
+             
               </div> -->
+              <div class="showcase__photo-2">
+                <img src="img/bg4.jpg" alt="" />
               </div>
               <div class="showcase__img showcase__img--1">
                 <img src="img/bg4.jpg" alt="" />
               </div>
               <div class="showcase__about">
-                <h2 class="showcase__about--title">
+                <!-- <h2 class="showcase__about--title">
                   About Our Creative agency
                 </h2>
                 <p class="paragraph">
@@ -78,7 +87,8 @@
                   choose a cohesive theme that best express your interest and
                   what inspires you. Find Your design pieces you need from
                   traditional to contemporary design.
-                </p>
+                </p> -->
+                <img src="img/bg5.jpg" alt="" />
               </div>
               <div class="showcase__img showcase__img--2">
                 <img src="img/bg2.jpg" alt="" />
@@ -86,85 +96,6 @@
             </section>
           </div>
 
-          <div class="slide">
-            <section class="showcase">
-              <div class="showcase__photo">
-                <img src="img/bg3.jpg" alt="" />
-              </div>
-              <div class="showcase__intro">
-                <h1 class="heading-primary">
-                  When <span class="text-m">Creativity</span> meets
-                  <span class="text-m">minimalist</span>
-                </h1>
-                <h4 class="showcase__description">
-                  A Simpler Creative agency experience for a simpler life.
-                </h4>
-                <button class="btn btn--scroll-to">Learn More &rarr;</button>
-                <!-- <div class="slide-box">
-                <button class="slide-box--1">&larr;</button>
-                <button class="slide-box--2">&rarr;</button>
-              </div> -->
-              </div>
-              <div class="showcase__img showcase__img--1">
-                <img src="img/bg4.jpg" alt="" />
-              </div>
-              <div class="showcase__about">
-                <h2 class="showcase__about--title">
-                  About Our Creative agency
-                </h2>
-                <p class="paragraph">
-                  Our multifunctional collection blends design and function to
-                  suit your individual choice. Make each products unique and
-                  choose a cohesive theme that best express your interest and
-                  what inspires you. Find Your design pieces you need from
-                  traditional to contemporary design.
-                </p>
-              </div>
-              <div class="showcase__img showcase__img--2">
-                <img src="img/bg2.jpg" alt="" />
-              </div>
-            </section>
-          </div>
-
-          <div class="slide">
-            <section class="showcase">
-              <div class="showcase__photo">
-                <img src="img/bg2.jpg" alt="" />
-              </div>
-              <div class="showcase__intro">
-                <h1 class="heading-primary">
-                  When <span class="text-m">Creativity</span> meets
-                  <span class="text-m">minimalist</span>
-                </h1>
-                <h4 class="showcase__description">
-                  A Simpler Creative agency experience for a simpler life.
-                </h4>
-                <button class="btn btn--scroll-to">Learn More &rarr;</button>
-                <!-- <div class="slide-box">
-                <button class="slide-box--1">&larr;</button>
-                <button class="slide-box--2">&rarr;</button>
-              </div> -->
-              </div>
-              <div class="showcase__img showcase__img--1">
-                <img src="img/bg4.jpg" alt="" />
-              </div>
-              <div class="showcase__about">
-                <h2 class="showcase__about--title">
-                  About Our Creative agency
-                </h2>
-                <p class="paragraph">
-                  Our multifunctional collection blends design and function to
-                  suit your individual choice. Make each products unique and
-                  choose a cohesive theme that best express your interest and
-                  what inspires you. Find Your design pieces you need from
-                  traditional to contemporary design.
-                </p>
-              </div>
-              <div class="showcase__img showcase__img--2">
-                <img src="img/bg2.jpg" alt="" />
-              </div>
-            </section>
-          </div>
           <div class="slide-box">
             <button class="slider__btn slider__btn--left slide-box--1">
               &larr;
@@ -173,6 +104,20 @@
               &rarr;
             </button>
           </div>
+
+          <div class="showcase__box">
+            <h1 class="heading-primary">
+              When <span class="text-m">Creativity</span> meets
+              <span class="text-m">minimalist</span>
+            </h1>
+            <h4 class="showcase__description">
+              Recursion teaches you how to come up with expected results from
+              difficult situation. Be Obsessed with learning in life.
+            </h4>
+            <button class="btn btn--scroll-to">Learn More &rarr;</button>
+          </div>
+
+          <div class="hero-overlay"></div>
         </div>
       </div>
     </section>
@@ -214,16 +159,16 @@
         </div>
         <!-- feature image 1 -->
         <img
-          src="img/grow.jpg"
-          data-src="img/bg1.jpg"
+          src="img/grow-lazy.jpg"
+          data-src="img/grow.jpg"
           alt=""
           class="features__img lazy-img"
         />
 
         <!-- feature image 2 -->
         <img
-          src="img/card.jpg"
-          data-src="img/bg2.jpg"
+          src="img/card-lazy.jpg"
+          data-src="img/card.jpg"
           alt=""
           class="features__img lazy-img"
         />
@@ -279,8 +224,8 @@
         </div>
         <!-- feature image 3 -->
         <img
-          src="img/grow.jpg"
-          data-src="img/bg4.jpg"
+          src="img/digital-lazy.jpg"
+          data-src="img/digital.jpg"
           alt=""
           class="features__img lazy-img"
         />
@@ -389,7 +334,7 @@
             data-tab="3"
           >
             <span>03</span>
-            Instant Closing
+            Instant Close
           </button>
           <!-- btn 4 -->
           <button
@@ -397,7 +342,7 @@
             data-tab="4"
           >
             <span>04</span>
-            Instant Closing
+            Instant Close
           </button>
         </div>
         <!-- operation Content -->
@@ -407,12 +352,12 @@
           <div class="operations__img">
             <img src="img/bg1.jpg" alt="" />
           </div>
-          <div class="operations__icon">
-            <svg>
-              <use xlink:href="img/sprite.svg#icon-desktop"></use>
-            </svg>
+          <div class="operations__preview">
+            <img src="img/bg4.jpg" alt="" />
           </div>
-          <h5 class="operations__heading">make your dreams come true</h5>
+          <h5 class="operations__heading">
+            Buy home or make your dreams come true
+          </h5>
           <p class="operations__description">
             Everything as simple as possible but no simpler everything as simple
             as possible but no simpler. Everything as simple as possible but no
@@ -425,10 +370,8 @@
           <div class="operations__img">
             <img src="img/bg2.jpg" alt="" />
           </div>
-          <div class="operations__icon">
-            <svg>
-              <use xlink:href="img/sprite.svg#icon-desktop"></use>
-            </svg>
+          <div class="operations__preview">
+            <img src="img/bg4.jpg" alt="" />
           </div>
           <h5 class="operations__heading">
             No longer need your account? Close it instantly.
@@ -445,13 +388,11 @@
           <div class="operations__img">
             <img src="img/bg3.jpg" alt="" />
           </div>
-          <div class="operations__icon">
-            <svg>
-              <use xlink:href="img/sprite.svg#icon-desktop"></use>
-            </svg>
+          <div class="operations__preview">
+            <img src="img/bg4.jpg" alt="" />
           </div>
           <h5 class="operations__heading">
-            Contribute Some Values to the World
+            Contribute Some good Values to the World
           </h5>
           <p class="operations__description">
             Everything as simple as possible but no simpler everything as simple
@@ -465,10 +406,8 @@
           <div class="operations__img">
             <img src="img/bg5.jpg" alt="" />
           </div>
-          <div class="operations__icon">
-            <svg>
-              <use xlink:href="img/sprite.svg#icon-desktop"></use>
-            </svg>
+          <div class="operations__preview">
+            <img src="img/bg4.jpg" alt="" />
           </div>
           <h5 class="operations__heading">We always Values Your Concern</h5>
           <p class="operations__description">
@@ -480,52 +419,7 @@
         </div>
       </div>
     </section>
-    <section class="section section-gallery">
-      <div class="section-title">
-        <span class="sub-heading">Gallery</span>
-        <h2 class="heading-secondary">
-          We always lead from forwards for your Success
-        </h2>
-      </div>
-      <div class="gallery">
-        <!-- Image 1 -->
-        <figure class="gallery__list gallery__list--1">
-          <img src="img/bg1.jpg" alt="" class="gallery__img" />
-        </figure>
-        <!-- Image-2 -->
-        <figure class="gallery__list gallery__list--2">
-          <img src="img/bg2.jpg" alt="" class="gallery__img" />
-        </figure>
-        <!-- Image -3 -->
-        <figure class="gallery__list gallery__list--3">
-          <img src="img/bg3.jpg" alt="" class="gallery__img" />
-        </figure>
-        <!-- Image -4 -->
-        <figure class="gallery__list gallery__list--4">
-          <img src="img/about2.jpg" alt="" class="gallery__img" />
-        </figure>
-        <!-- Image 5 -->
-        <figure class="gallery__list gallery__list--5">
-          <img src="img/bg5.jpg" alt="" class="gallery__img" />
-        </figure>
-        <!-- Image-6 -->
-        <figure class="gallery__list gallery__list--6">
-          <img src="img/pic3.jpg" alt="" class="gallery__img" />
-        </figure>
-        <!-- Image -7-->
-        <figure class="gallery__list gallery__list--7">
-          <img src="img/bg2.jpg" alt="" class="gallery__img" />
-        </figure>
-        <!-- Image -8 -->
-        <figure class="gallery__list gallery__list--8">
-          <img src="img/about2.jpg" alt="" class="gallery__img" />
-        </figure>
-        <!-- Image 9 -->
-        <figure class="gallery__list gallery__list--9">
-          <img src="img/pic3.jpg" alt="" class="gallery__img" />
-        </figure>
-      </div>
-    </section>
+
     <section class="section section-testimonials" id="section--3">
       <div class="section-title">
         <span class="sub-heading">NOT SURE YET?</span>
@@ -637,7 +531,7 @@
       </div>
       <!--  -->
       <div class="question">
-        <div class="question__box">
+        <div class="question__intro">
           <p class="question__number">01</p>
           <p class="question__name">
             Do You Ship to countries Outside the Asia?
@@ -656,7 +550,9 @@
               />
             </svg>
           </button>
-          <div class="question__description hidden-box">
+        </div>
+        <div class="question__box hidden-box">
+          <div class="question__description">
             <p class="question__description--answer">
               Millions of Business Person are already making their lifes simpler
               millions of Business Person are already making their lifes
@@ -687,8 +583,8 @@
       </div>
       <!-- question-2 -->
       <div class="question">
-        <div class="question__box">
-          <p class="question__number">01</p>
+        <div class="question__intro">
+          <p class="question__number">02</p>
           <p class="question__name">
             Do You Ship to countries Outside the Asia?
           </p>
@@ -706,6 +602,8 @@
               />
             </svg>
           </button>
+        </div>
+        <div class="question__box">
           <div class="question__description hidden-box">
             <p class="question__description--answer">
               Millions of Business Person are already making their lifes simpler
@@ -737,8 +635,8 @@
       </div>
       <!-- question-3 -->
       <div class="question">
-        <div class="question__box">
-          <p class="question__number">01</p>
+        <div class="question__intro">
+          <p class="question__number">03</p>
           <p class="question__name">
             Do You Ship to countries Outside the Asia?
           </p>
@@ -756,6 +654,8 @@
               />
             </svg>
           </button>
+        </div>
+        <div class="question__box">
           <div class="question__description hidden-box">
             <p class="question__description--answer">
               Millions of Business Person are already making their lifes simpler
@@ -787,8 +687,8 @@
       </div>
       <!-- question 4 -->
       <div class="question">
-        <div class="question__box">
-          <p class="question__number">01</p>
+        <div class="question__intro">
+          <p class="question__number">04</p>
           <p class="question__name">
             Do You Ship to countries Outside the Asia?
           </p>
@@ -806,6 +706,8 @@
               />
             </svg>
           </button>
+        </div>
+        <div class="question__box">
           <div class="question__description hidden-box">
             <p class="question__description--answer">
               Millions of Business Person are already making their lifes simpler
@@ -855,6 +757,225 @@
       </form>
     </div>
     <div class="overlay hidden"></div>
-    <!-- <script src="script.js"></script> -->
+    <!-- <script src="./app.js"></script> -->
   </body>
 </html>
+
+<!-- Gallery Version 01 -->
+<!--
+  <section class="section section-gallery">
+      <div class="section-title">
+        <span class="sub-heading">Gallery</span>
+        <h2 class="heading-secondary">
+          We always lead from forwards for your Success
+        </h2>
+      </div>
+      <div class="gallery">
+       Image 1 -->
+<!-- <figure class="gallery__list gallery__list--1">
+          <img src="img/bg1.jpg" alt="" class="gallery__img" />
+        </figure> -->
+<!-- Image-2 -->
+<!-- <figure class="gallery__list gallery__list--2">
+          <img src="img/bg2.jpg" alt="" class="gallery__img" />
+        </figure> -->
+<!-- Image -3 -->
+<!-- <figure class="gallery__list gallery__list--3">
+          <img src="img/bg3.jpg" alt="" class="gallery__img" />
+        </figure> -->
+<!-- Image -4 -->
+<!-- <figure class="gallery__list gallery__list--4">
+          <img src="img/pic3.jpg" alt="" class="gallery__img" />
+        </figure> -->
+<!-- Image 5 -->
+<!-- <figure class="gallery__list gallery__list--5">
+          <img src="img/bg5.jpg" alt="" class="gallery__img" />
+        </figure> -->
+<!-- Image-6 -->
+<!-- <figure class="gallery__list gallery__list--6">
+          <img src="img/pic3.jpg" alt="" class="gallery__img" />
+        </figure> -->
+<!-- Image -7-->
+<!-- <figure class="gallery__list gallery__list--7">
+          <img src="img/grow.jpg" alt="" class="gallery__img" />
+        </figure> -->
+<!-- Image -8 -->
+<!-- <figure class="gallery__list gallery__list--8">
+          <img src="img/about2.jpg" alt="" class="gallery__img" />
+        </figure> -->
+<!-- Image 9 -->
+<!-- <figure class="gallery__list gallery__list--9">
+          <img src="img/pic3.jpg" alt="" class="gallery__img" />
+        </figure> -->
+<!-- </div>
+    </section> -->
+<!-- <div class="gallery">
+   Image 1
+  <figure class="gallery__list gallery__list--1">
+    <img src="img/bg1.jpg" alt="" class="gallery__img" />
+  </figure>
+   Image-2
+  <figure class="gallery__list gallery__list--2">
+    <img src="img/bg2.jpg" alt="" class="gallery__img" />
+  </figure>
+   Image -3
+  <figure class="gallery__list gallery__list--3">
+    <img src="img/bg3.jpg" alt="" class="gallery__img" />
+  </figure>
+   Image -4
+  <figure class="gallery__list gallery__list--4">
+    <img src="img/about2.jpg" alt="" class="gallery__img" />
+  </figure>
+   Image 5
+  <figure class="gallery__list gallery__list--5">
+    <img src="img/bg5.jpg" alt="" class="gallery__img" />
+  </figure>
+   Image-6
+  <figure class="gallery__list gallery__list--6">
+    <img src="img/pic3.jpg" alt="" class="gallery__img" />
+  </figure>
+   Image -
+  <figure class="gallery__list gallery__list--7">
+    <img src="img/bg2.jpg" alt="" class="gallery__img" />
+  </figure>
+   Image -8
+  <figure class="gallery__list gallery__list--8">
+    <img src="img/about2.jpg" alt="" class="gallery__img" />
+  </figure>
+   Image 9
+  <figure class="gallery__list gallery__list--9">
+    <img src="img/pic3.jpg" alt="" class="gallery__img" />
+  </figure>
+</div> -->
+
+<!-- Section header previous version -->
+<!-- <section class="hero section-hero">
+  <div class="raju2">
+    <div class="slider">
+      <div class="slide">
+        <section class="showcase">
+          <div class="showcase__photo">
+            <img src="img/bg1.jpg" alt="" />
+          </div>
+          <div class="showcase__intro">
+            <h1 class="heading-primary">
+              When <span class="text-m">Creativity</span> meets
+              <span class="text-m">minimalist</span>
+            </h1>
+            <h4 class="showcase__description">
+              A Simpler Creative agency experience for a simpler life.
+            </h4>
+            <button class="btn btn--scroll-to">Learn More &rarr;</button>
+         
+          </div>
+          <div class="showcase__photo-2">
+            <img src="img/bg4.jpg" alt="" />
+          </div>
+          <div class="showcase__img showcase__img--1">
+            <img src="img/bg4.jpg" alt="" />
+          </div>
+          <div class="showcase__about">
+            <h2 class="showcase__about--title">
+              About Our Creative agency
+            </h2>
+            <p class="paragraph">
+              Our multifunctional collection blends design and function to
+              suit your individual choice. Make each products unique and
+              choose a cohesive theme that best express your interest and
+              what inspires you. Find Your design pieces you need from
+              traditional to contemporary design.
+            </p>
+            <img src="img/bg5.jpg" alt="" />
+          </div>
+          <div class="showcase__img showcase__img--2">
+            <img src="img/bg2.jpg" alt="" />
+          </div>
+        </section>
+      </div>
+
+      <div class="slide">
+        <section class="showcase">
+          <div class="showcase__photo">
+            <img src="img/bg3.jpg" alt="" />
+          </div>
+          <div class="showcase__intro">
+            <h1 class="heading-primary">
+              When <span class="text-m">Creativity</span> meets
+              <span class="text-m">minimalist</span>
+            </h1>
+            <h4 class="showcase__description">
+              A Simpler Creative agency experience for a simpler life.
+            </h4>
+            <button class="btn btn--scroll-to">Learn More &rarr;</button>
+        
+          </div>
+          <div class="showcase__img showcase__img--1">
+            <img src="img/bg4.jpg" alt="" />
+          </div>
+          <div class="showcase__about">
+            <h2 class="showcase__about--title">
+              About Our Creative agency
+            </h2>
+            <p class="paragraph">
+              Our multifunctional collection blends design and function to
+              suit your individual choice. Make each products unique and
+              choose a cohesive theme that best express your interest and
+              what inspires you. Find Your design pieces you need from
+              traditional to contemporary design.
+            </p>
+          </div>
+          <div class="showcase__img showcase__img--2">
+            <img src="img/bg2.jpg" alt="" />
+          </div>
+        </section>
+      </div>
+
+      <div class="slide">
+        <section class="showcase">
+          <div class="showcase__photo">
+            <img src="img/bg2.jpg" alt="" />
+          </div>
+          <div class="showcase__intro">
+            <h1 class="heading-primary">
+              When <span class="text-m">Creativity</span> meets
+              <span class="text-m">minimalist</span>
+            </h1>
+            <h4 class="showcase__description">
+              A Simpler Creative agency experience for a simpler life.
+            </h4>
+            <button class="btn btn--scroll-to">Learn More &rarr;</button>
+            
+          </div>
+          <div class="showcase__img showcase__img--1">
+            <img src="img/bg4.jpg" alt="" />
+          </div>
+          <div class="showcase__about">
+            <h2 class="showcase__about--title">
+              About Our Creative agency
+            </h2>
+            <p class="paragraph">
+              Our multifunctional collection blends design and function to
+              suit your individual choice. Make each products unique and
+              choose a cohesive theme that best express your interest and
+              what inspires you. Find Your design pieces you need from
+              traditional to contemporary design.
+            </p>
+          </div>
+          <div class="showcase__img showcase__img--2">
+            <img src="img/bg2.jpg" alt="" />
+          </div>
+        </section>
+      </div>
+
+      <div class="slide-box">
+        <button class="slider__btn slider__btn--left slide-box--1">
+          &larr;
+        </button>
+        <button class="slider__btn slider__btn--right slide-box--2">
+          &rarr;
+        </button>
+      </div>
+      
+    </div>
+  </div>
+</section> -->

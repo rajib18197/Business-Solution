@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        font-size: 62.5%;
+      }
+
+      body {
+        font-family: sans-serif;
+        line-height: 1.5;
+      }
+      .counter-container {
+        width: 1000px;
+        margin: 10rem auto;
+        background-color: #191420;
+        color: white;
+        padding: 4rem 2rem;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 2rem;
+      }
+
+      .counter {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        background-color: white;
+        color: #111;
+        box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.2);
+        /* padding: 2rem; */
+      }
+
+      .counter h1 {
+        font-size: 3rem;
+        font-weight: 600;
+        text-align: center;
+      }
+      .counter .btn-count {
+        display: inline-block;
+        font-size: 1.6rem;
+        padding: 1.5rem 3rem;
+        /* border-radius: 4px; */
+        background-color: rgb(58, 38, 59);
+        border: none;
+        outline: none;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="counter-container"></div>
+
+    <script>
+      const html = function () {
+        return `
+            <div class="counter">
+                <h1 class="count-display">0</h1>
+                <button class="btn-count">ADDITION</button>
+            </div>`;
+      };
+
+      const numberOfMarkup = 4;
+      const markup = html();
+      const counterContainer = document.querySelector('.counter-container');
+      for (let i = 0; i < numberOfMarkup; i++) {
+        counterContainer.insertAdjacentHTML('afterBegin', markup);
+      }
+
+      counterContainer.addEventListener('click', function (e) {
+        console.log(e.target);
+
+        if (e.target.classList.contains('btn-count')) {
+          const dispayCount = Number(
+            e.target.closest('.counter').querySelector('.count-display')
+              .textContent
+          );
+
+          console.log(dispayCount);
+
+          e.target
+            .closest('.counter')
+            .querySelector('.count-display').textContent = dispayCount + 1;
+        }
+      });
+    </script>
+  </body>
+</html>
