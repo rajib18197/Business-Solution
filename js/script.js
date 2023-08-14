@@ -261,9 +261,11 @@ allImages.forEach(img => {
 ////  * Slider Component *   ////
 /*=============================*/
 const slider = function () {
-  const slides = document.querySelectorAll('.raju .slide');
-  const btnLeft = document.querySelector('.raju .slider__btn--left');
-  const btnRight = document.querySelector('.raju .slider__btn--right');
+  const slides = document.querySelectorAll('.slider-wrapper .slide');
+  const btnLeft = document.querySelector('.slider-wrapper .slider__btn--left');
+  const btnRight = document.querySelector(
+    '.slider-wrapper .slider__btn--right'
+  );
   const dotsContainer = document.querySelector('.dots');
 
   let currentSlide = 0;
